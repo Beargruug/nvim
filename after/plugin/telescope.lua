@@ -12,12 +12,12 @@ local actions = require('telescope.actions')
 -- Global remapping
 ------------------------------
 require('telescope').setup {
-    defaults = {
-        file_ignore_patterns = { "node_modules" },
-        mappings = {
-            n = {
-                ["q"] = actions.close
-            },
-        },
+  defaults = {
+    file_ignore_patterns = { "node_modules" },
+    mappings = {
+      n = {
+        ["q"] = actions.close
+      },
     },
+  },
 }

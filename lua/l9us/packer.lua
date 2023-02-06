@@ -8,6 +8,16 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use('folke/lsp-colors.nvim')
+
+  -- Run test inside nvim
+  use {
+    "klen/nvim-test",
+    config = function()
+      require('nvim-test').setup()
+    end
+  }
+
+  -- Colorscheme
   use({
     'gruvbox-community/gruvbox',
     as = 'gruvbox',
@@ -15,7 +25,13 @@ return require('packer').startup(function(use)
       vim.cmd('colorscheme gruvbox')
     end
   })
-  use('~/workspaces/plugins/keymaps_cheatsheet.nvim')
+
+  -- Custom Plugins
+  -- use('~/workspaces/plugins/keymaps_cheatsheet.nvim')
+
+  -- Blazingly fast plugins
+  use('ThePrimeagen/vim-be-good')
+  use('ThePrimeagen/harpoon')
   use {
     "ThePrimeagen/refactoring.nvim",
     requires = {
@@ -25,11 +41,9 @@ return require('packer').startup(function(use)
   }
 
   -- Treesitter
-  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use('nvim-treesitter/nvim-treesitter-context')
   use('eckon/treesitter-current-functions')
-
-  use('JoosepAlviste/nvim-ts-context-commentstring')
 
   -- Style
   use('p00f/nvim-ts-rainbow')
@@ -44,6 +58,7 @@ return require('packer').startup(function(use)
   use('vim-airline/vim-airline-themes')
 
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+  use('JoosepAlviste/nvim-ts-context-commentstring')
 
   -- Icons
   use('kyazdani42/nvim-web-devicons')
@@ -53,9 +68,6 @@ return require('packer').startup(function(use)
 
   -- Vertical indent
   use('Yggdroot/indentLine')
-
-  -- Training
-  use('ThePrimeagen/vim-be-good')
 
   --  Debugger
   use('mfussenegger/nvim-dap')
