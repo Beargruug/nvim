@@ -1,3 +1,3 @@
 # My nvim config
 
-inspired by ThePrimeagen
+never ending work in progress..
