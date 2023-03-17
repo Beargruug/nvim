@@ -10,19 +10,14 @@ return require('packer').startup(function(use)
   use('folke/lsp-colors.nvim')
 
   -- Run test inside nvim
-  use {
-    "klen/nvim-test",
-    config = function()
-      require('nvim-test').setup()
-    end
-  }
+  use("klen/nvim-test")
 
   -- Colorscheme
   use({
-    'gruvbox-community/gruvbox',
-    as = 'gruvbox',
+    'rebelot/kanagawa.nvim',
+    as = 'kanagawa',
     config = function()
-      vim.cmd('colorscheme gruvbox')
+      vim.cmd('colorscheme kanagawa')
     end
   })
 
@@ -54,8 +49,12 @@ return require('packer').startup(function(use)
   use('windwp/nvim-ts-autotag')
 
   -- Statusline
-  use('vim-airline/vim-airline')
-  use('vim-airline/vim-airline-themes')
+  -- use('vim-airline/vim-airline')
+  -- use('vim-airline/vim-airline-themes')
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use('JoosepAlviste/nvim-ts-context-commentstring')
@@ -116,6 +115,9 @@ return require('packer').startup(function(use)
       { 'williamboman/mason-lspconfig.nvim' },
       { 'jose-elias-alvarez/null-ls.nvim' },
 
+      -- Useful status updates for LSP
+      'j-hui/fidget.nvim',
+
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' },
       { 'hrsh7th/cmp-buffer' },
@@ -134,6 +136,6 @@ return require('packer').startup(function(use)
     }
   }
 
+  use("github/copilot.vim")
   use("folke/zen-mode.nvim")
-
 end)
