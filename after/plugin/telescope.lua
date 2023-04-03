@@ -1,3 +1,5 @@
+local telescope = require('telescope')
+
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', ';f', builtin.find_files, {})
@@ -11,7 +13,7 @@ local actions = require('telescope.actions')
 
 -- Global remapping
 ------------------------------
-require('telescope').setup {
+telescope.setup {
   defaults = {
     file_ignore_patterns = { "node_modules" },
     mappings = {
@@ -21,3 +23,6 @@ require('telescope').setup {
     },
   },
 }
+vim.keymap.set('n', '<leader>gwt', ':Telescope git_worktree git_worktrees<CR>')
+vim.keymap.set('n', '<leader>gct', ':Telescope git_worktree create_git_worktree<CR>')
+vim.keymap.set('n', '<leader>gdt', ':Telescope git_worktree delete_git_worktree<CR>')

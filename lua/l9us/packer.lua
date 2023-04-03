@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
 
   use('folke/lsp-colors.nvim')
 
+  -- Robot Framework
+  use('mfukar/robotframework-vim')
+
   -- Run test inside nvim
   use("klen/nvim-test")
 
@@ -49,8 +52,6 @@ return require('packer').startup(function(use)
   use('windwp/nvim-ts-autotag')
 
   -- Statusline
-  -- use('vim-airline/vim-airline')
-  -- use('vim-airline/vim-airline-themes')
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }

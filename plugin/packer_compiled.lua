@@ -281,6 +281,11 @@ _G.packer_plugins = {
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/ThePrimeagen/refactoring.nvim"
   },
+  ["robotframework-vim"] = {
+    loaded = true,
+    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/robotframework-vim",
+    url = "https://github.com/mfukar/robotframework-vim"
+  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
