@@ -19,7 +19,7 @@ require("telescope").setup {
       layout_config = { height = 50, width = 100 },
       theme = "dropdown",
       -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = true,
+      hijack_netrw = false,
       mappings = {
         -- your custom insert mode mappings
         ["i"] = {

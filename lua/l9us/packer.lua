@@ -7,11 +7,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use('folke/lsp-colors.nvim')
-
-  -- Robot Framework
-  use('mfukar/robotframework-vim')
-
   -- Run test inside nvim
   use("klen/nvim-test")
 
@@ -70,10 +65,10 @@ return require('packer').startup(function(use)
   use('Yggdroot/indentLine')
 
   --  Debugger
-  use('mfussenegger/nvim-dap')
-  use('rcarriga/nvim-dap-ui')
-  use('leoluz/nvim-dap-go')
-  use('theHamsta/nvim-dap-virtual-text')
+  -- use('mfussenegger/nvim-dap')
+  -- use('rcarriga/nvim-dap-ui')
+  -- use('leoluz/nvim-dap-go')
+  -- use('theHamsta/nvim-dap-virtual-text')
 
   -- Go
   use('fatih/vim-go')
@@ -87,9 +82,6 @@ return require('packer').startup(function(use)
   use('tpope/vim-commentary')
   use('tpope/vim-repeat')
   use('tpope/vim-surround')
-
-  -- Package Update
-  use('Nguyen-Hoang-Nam/vim-version')
 
   -- Git
   use('sindrets/diffview.nvim')
@@ -107,6 +99,7 @@ return require('packer').startup(function(use)
   use('prettier/vim-prettier')
 
   -- LSP
+  use('folke/lsp-colors.nvim')
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -137,6 +130,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  use("github/copilot.vim")
+  -- use("github/copilot.vim")
   use("folke/zen-mode.nvim")
 end)

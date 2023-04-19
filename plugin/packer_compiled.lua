@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/diffview.nvim",
@@ -201,26 +196,6 @@ _G.packer_plugins = {
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-go"] = {
-    loaded = true,
-    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
-    url = "https://github.com/leoluz/nvim-dap-go"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-dap-virtual-text"] = {
-    loaded = true,
-    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
-    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -280,11 +255,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/ThePrimeagen/refactoring.nvim"
-  },
-  ["robotframework-vim"] = {
-    loaded = true,
-    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/robotframework-vim",
-    url = "https://github.com/mfukar/robotframework-vim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
@@ -350,11 +320,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-version"] = {
-    loaded = true,
-    path = "/Users/f.scheid/.local/share/nvim/site/pack/packer/start/vim-version",
-    url = "https://github.com/Nguyen-Hoang-Nam/vim-version"
   },
   ["vim-vsnip"] = {
     loaded = true,
