@@ -37,6 +37,12 @@ return require('packer').startup(function(use)
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use('nvim-treesitter/nvim-treesitter-context')
   use('eckon/treesitter-current-functions')
+  use({
+    'laytan/tailwind-sorter.nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
+    config = function() require('tailwind-sorter').setup() end,
+    run = 'cd formatter && npm i && npm run build',
+  })
 
   -- Style
   use('p00f/nvim-ts-rainbow')
