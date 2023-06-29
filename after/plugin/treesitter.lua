@@ -49,7 +49,6 @@ require('nvim-treesitter.configs').setup({
   },
   ensure_installed = {
     "tsx",
-    "help",
     "javascript",
     "typescript",
     "lua",

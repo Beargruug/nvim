@@ -103,6 +103,7 @@ return require('packer').startup(function(use)
 
   -- Prettier
   use('prettier/vim-prettier')
+  -- use('MunifTanjim/eslint.nvim')
 
   -- LSP
   use('folke/lsp-colors.nvim')
@@ -136,6 +137,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- use("github/copilot.vim")
+  use("github/copilot.vim")
   use("folke/zen-mode.nvim")
 end)
