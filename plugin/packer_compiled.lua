@@ -256,6 +256,11 @@ _G.packer_plugins = {
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["projectlaunch.nvim"] = {
+    loaded = true,
+    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/projectlaunch.nvim",
+    url = "https://github.com/sheodox/projectlaunch.nvim"
+  },
   ["refactoring.nvim"] = {
     loaded = true,
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
@@ -307,11 +312,6 @@ _G.packer_plugins = {
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-gitgutter"] = {
-    loaded = true,
-    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
-    url = "https://github.com/airblade/vim-gitgutter"
-  },
   ["vim-go"] = {
     loaded = true,
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/vim-go",
@@ -345,6 +345,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: tailwind-sorter.nvim
+time([[Config for tailwind-sorter.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20tailwind-sorter\frequire\0", "config", "tailwind-sorter.nvim")
+time([[Config for tailwind-sorter.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
@@ -353,10 +357,6 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for kanagawa]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
 time([[Config for kanagawa]], false)
--- Config for: tailwind-sorter.nvim
-time([[Config for tailwind-sorter.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20tailwind-sorter\frequire\0", "config", "tailwind-sorter.nvim")
-time([[Config for tailwind-sorter.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

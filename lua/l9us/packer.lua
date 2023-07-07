@@ -33,6 +33,9 @@ return require('packer').startup(function(use)
     }
   }
 
+  --Project launcher
+  use('sheodox/projectlaunch.nvim')
+
   -- Treesitter
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use('nvim-treesitter/nvim-treesitter-context')
@@ -91,7 +94,6 @@ return require('packer').startup(function(use)
 
   -- Git
   use('sindrets/diffview.nvim')
-  use('airblade/vim-gitgutter')
   use('APZelos/blamer.nvim')
 
   -- Telescope
