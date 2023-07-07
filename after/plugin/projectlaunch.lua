@@ -1,20 +1,22 @@
--- optionally override defaults
-require('projectlaunch').setup({
+-- loptionally override defaults
+local projectlaunch = require('projectlaunch')
+
+projectlaunch.setup({
     -- set a default width for split windows
     split_default_width = 80,
     -- if opening the split terminal should move focus to the split's window
     split_focus_on_open = false,
     -- the filename of configuration file which under root directory.
-    config_path = ".projectlaunch.json",
+    config_path = "~/.projectlaunch.json",
     -- automatically reload config after loading a session or updating your ProjectLaunch config file
     auto_reload_config = true,
 })
 
 -- open the main menu
-vim.keymap.set('n', "<leader>ll", projectlaunch.toggle_main_menu, {noremap = true, expr = false, buffer = false})
+vim.keymap.set('n', "<leader><leader>m", projectlaunch.toggle_main_menu, {noremap = true, expr = false, buffer = false})
 
 -- open the floating window terminal viewer
-vim.keymap.set('n', "<leader>lf", projectlaunch.toggle_float, {noremap = true, expr = false, buffer = false})
+vim.keymap.set('n', "<leader><leader>lf", projectlaunch.toggle_float, {noremap = true, expr = false, buffer = false})
 
 -- open the split window terminal viewer
 vim.keymap.set('n', "<leader>ls", projectlaunch.toggle_split, {noremap = true, expr = false, buffer = false})

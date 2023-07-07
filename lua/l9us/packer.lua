@@ -118,9 +118,6 @@ return require('packer').startup(function(use)
       { 'williamboman/mason-lspconfig.nvim' },
       { 'jose-elias-alvarez/null-ls.nvim' },
 
-      -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
-
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' },
       { 'hrsh7th/cmp-buffer' },
