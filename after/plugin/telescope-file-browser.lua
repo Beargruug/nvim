@@ -17,6 +17,7 @@ require("telescope").setup {
       previewer = false,
       initial_mode = "normal",
       layout_config = { height = 50, width = 100 },
+      prompt_path = true,
       theme = "dropdown",
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = false,
