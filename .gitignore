@@ -1,3 +1,4 @@
+.DS_Store
 plugin/packer_compiled.lua
 
 # Compiled Lua sources
