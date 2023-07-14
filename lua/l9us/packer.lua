@@ -7,8 +7,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Run test inside nvim
-  use("klen/nvim-test")
+  -- Run test inside nvim for jest
+  -- use("klen/nvim-test")
 
   -- Colorscheme
   use({
@@ -19,19 +19,23 @@ return require('packer').startup(function(use)
     end
   })
 
-  -- Custom Plugins
-  -- use('~/workspaces/plugins/keymaps_cheatsheet.nvim')
+  use({
+    "folke/trouble.nvim",
+    config = function()
+        require("trouble").setup {
+            icons = false,
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    end
+  })
 
   -- Blazingly fast plugins
   use('ThePrimeagen/vim-be-good')
   use('ThePrimeagen/harpoon')
-  use {
-    "ThePrimeagen/refactoring.nvim",
-    requires = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-treesitter/nvim-treesitter" }
-    }
-  }
+  use('ThePrimeagen/refactoring.nvim')
+  use('ThePrimeagen/git-worktree.nvim')
 
   --Project launcher
   use('sheodox/projectlaunch.nvim')
@@ -40,12 +44,6 @@ return require('packer').startup(function(use)
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use('nvim-treesitter/nvim-treesitter-context')
   use('eckon/treesitter-current-functions')
-  use({
-    'laytan/tailwind-sorter.nvim',
-    requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
-    config = function() require('tailwind-sorter').setup() end,
-    run = 'cd formatter && npm i && npm run build',
-  })
 
   -- Style
   use('p00f/nvim-ts-rainbow')
@@ -73,19 +71,6 @@ return require('packer').startup(function(use)
   -- Vertical indent
   use('Yggdroot/indentLine')
 
-  --  Debugger
-  -- use('mfussenegger/nvim-dap')
-  -- use('rcarriga/nvim-dap-ui')
-  -- use('leoluz/nvim-dap-go')
-  -- use('theHamsta/nvim-dap-virtual-text')
-
-  -- Go
-  use('fatih/vim-go')
-  -- Plug 'crispgm/nvim-go'
-
-  -- Worktree
-  use('ThePrimeagen/git-worktree.nvim')
-
   -- Session
   use('tpope/vim-fugitive')
   use('tpope/vim-commentary')
@@ -99,13 +84,11 @@ return require('packer').startup(function(use)
   -- Telescope
   use('nvim-telescope/telescope.nvim')
   use('nvim-telescope/telescope-file-browser.nvim')
-  use('nvim-telescope/telescope-dap.nvim')
-  use('nvim-lua/popup.nvim')
+  -- use('nvim-lua/popup.nvim')
   use('nvim-lua/plenary.nvim')
 
   -- Prettier
   use('prettier/vim-prettier')
-  -- use('MunifTanjim/eslint.nvim')
 
   -- LSP
   use('folke/lsp-colors.nvim')

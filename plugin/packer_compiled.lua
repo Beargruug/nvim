@@ -201,11 +201,6 @@ _G.packer_plugins = {
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-test"] = {
-    loaded = true,
-    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/nvim-test",
-    url = "https://github.com/klen/nvim-test"
-  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -246,11 +241,6 @@ _G.packer_plugins = {
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/popup.nvim",
-    url = "https://github.com/nvim-lua/popup.nvim"
-  },
   ["projectlaunch.nvim"] = {
     loaded = true,
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/projectlaunch.nvim",
@@ -260,17 +250,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/ThePrimeagen/refactoring.nvim"
-  },
-  ["tailwind-sorter.nvim"] = {
-    config = { "\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20tailwind-sorter\frequire\0" },
-    loaded = true,
-    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/tailwind-sorter.nvim",
-    url = "https://github.com/laytan/tailwind-sorter.nvim"
-  },
-  ["telescope-dap.nvim"] = {
-    loaded = true,
-    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
-    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -286,6 +265,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/treesitter-current-functions",
     url = "https://github.com/eckon/treesitter-current-functions"
+  },
+  ["trouble.nvim"] = {
+    config = { "\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   undotree = {
     loaded = true,
@@ -306,11 +291,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fas/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/Users/fas/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/fatih/vim-go"
   },
   ["vim-prettier"] = {
     loaded = true,
@@ -340,18 +320,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tailwind-sorter.nvim
-time([[Config for tailwind-sorter.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20tailwind-sorter\frequire\0", "config", "tailwind-sorter.nvim")
-time([[Config for tailwind-sorter.nvim]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: kanagawa
+time([[Config for kanagawa]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
+time([[Config for kanagawa]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
