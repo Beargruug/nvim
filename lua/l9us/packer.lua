@@ -41,7 +41,13 @@ return require('packer').startup(function(use)
   use('sheodox/projectlaunch.nvim')
 
   -- Treesitter
-  use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+  use {
+			'nvim-treesitter/nvim-treesitter',
+			run = function()
+				local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+				ts_update()
+			end,}
+  use("nvim-treesitter/playground")
   use('nvim-treesitter/nvim-treesitter-context')
   use('eckon/treesitter-current-functions')
 
