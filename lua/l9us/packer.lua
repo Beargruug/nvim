@@ -49,7 +49,6 @@ return require('packer').startup(function(use)
 			end,}
   use("nvim-treesitter/playground")
   use('nvim-treesitter/nvim-treesitter-context')
-  use('eckon/treesitter-current-functions')
 
   -- Style
   use('p00f/nvim-ts-rainbow')
