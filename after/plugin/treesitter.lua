@@ -10,7 +10,7 @@ require 'nvim-treesitter.configs'.setup {
     end,
     additional_vim_regex_highlighting = false,
   },
-  ensure_installed = { "vimdoc", "javascript", "typescript", "lua" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "typescript" },
   sync_install = false,
   auto_install = true,
   context = {
