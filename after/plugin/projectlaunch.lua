@@ -34,6 +34,7 @@ vim.keymap.set('n', "<leader>lr", projectlaunch.restart_command_in_split, {norem
 -- running specific parts of test suites, put everything but the test suite name in here then edit later
 projectlaunch.add_custom_command("pnpm install")
 projectlaunch.add_custom_command("pnpm start")
+projectlaunch.add_custom_command("pnpm generate:graphql")
 projectlaunch.add_custom_command("pnpm test")
 projectlaunch.add_custom_command("pnpm tsc")
 projectlaunch.add_custom_command("pnpm start:dev")
