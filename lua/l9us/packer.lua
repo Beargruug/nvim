@@ -45,8 +45,6 @@ return require('packer').startup(function(use)
   use("nvim-treesitter/playground")
   use('nvim-treesitter/nvim-treesitter-context')
 
-  -- Style
-  use('p00f/nvim-ts-rainbow')
   use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
