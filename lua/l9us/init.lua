@@ -1,4 +1,5 @@
 require('l9us.set')
+require('l9us.lazy')
 require('l9us.remap')
 require('l9us.globals')
 
