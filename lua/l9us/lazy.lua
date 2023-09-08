@@ -91,7 +91,7 @@ local plugins = {
 
   -- Telescope
   'nvim-telescope/telescope.nvim',
-  'nvim-telescope/telescope-file-browser.nvim',
+  -- 'nvim-telescope/telescope-file-browser.nvim',
   -- ('nvim-lua/popup.nvim')
   'nvim-lua/plenary.nvim',
 

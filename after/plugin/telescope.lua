@@ -7,7 +7,6 @@ vim.keymap.set('n', '<c-p>', builtin.git_files, {})
 vim.keymap.set('n', ';r', builtin.live_grep, {})
 vim.keymap.set('n', ';h', builtin.oldfiles, {})
 vim.keymap.set('n', '\\', builtin.buffers, {})
-vim.keymap.set('n', ';cf', '<cmd>GetCurrentFunctions<CR>')
 
 local actions = require('telescope.actions')
 
