@@ -84,6 +84,8 @@ local plugins = {
   'tpope/vim-commentary',
   'tpope/vim-repeat',
   'tpope/vim-surround',
+  'tpope/vim-dadbod',
+  'kristijanhusak/vim-dadbod-ui',
 
   -- Git
   'sindrets/diffview.nvim',
