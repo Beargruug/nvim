@@ -30,7 +30,7 @@ local plugins = {
   {
     "folke/trouble.nvim",
     config = function()
-      require("trouble").setup{
+      require("trouble").setup {
         icons = false,
       }
     end
@@ -57,7 +57,7 @@ local plugins = {
 
   {
     "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup{} end
+    config = function() require("nvim-autopairs").setup {} end
   },
   'windwp/nvim-ts-autotag',
 
