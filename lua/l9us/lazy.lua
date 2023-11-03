@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -42,7 +43,8 @@ local plugins = {
   'ThePrimeagen/git-worktree.nvim',
 
   --Project launcher
-  'sheodox/projectlaunch.nvim',
+  -- 'sheodox/projectlaunch.nvim',
+  "l9us/projectlaunch.nvim",
 
   -- Treesitter
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -120,6 +122,7 @@ local plugins = {
       }
     },
   },
+
 
   "github/copilot.vim",
   "folke/zen-mode.nvim",

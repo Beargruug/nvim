@@ -10,6 +10,8 @@ projectlaunch.setup({
   config_path = "~/.projectlaunch.json",
   -- automatically reload config after loading a session or updating your ProjectLaunch config file
   auto_reload_config = true,
+  -- set a default width for menu window
+  max_menu_width = 80,
 })
 
 -- open the main menu
