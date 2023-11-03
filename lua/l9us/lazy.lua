@@ -19,13 +19,7 @@ local plugins = {
   -- ("klen/nvim-test")
 
   -- Colorscheme
-  {
-    'rebelot/kanagawa.nvim',
-    name = 'kanagawa',
-    config = function()
-      vim.cmd('colorscheme kanagawa')
-    end
-  },
+  'rebelot/kanagawa.nvim',
 
   {
     "folke/trouble.nvim",
