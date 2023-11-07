@@ -82,6 +82,7 @@ local plugins = {
   'tpope/vim-surround',
   'tpope/vim-dadbod',
   'kristijanhusak/vim-dadbod-ui',
+  "kristijanhusak/vim-dadbod-completion",
 
   -- Git
   'sindrets/diffview.nvim',
