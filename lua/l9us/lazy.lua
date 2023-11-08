@@ -16,9 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 local plugins = {
-  -- Run test inside nvim for jest
-  -- ("klen/nvim-test")
-
   -- Colorscheme
   'rebelot/kanagawa.nvim',
 
