@@ -34,7 +34,7 @@ vim.keymap.set('n', "<leader>lr", projectlaunch.restart_command_in_split, { nore
 -- from a tool you use that projectlaunch.nvim doesn't support. or type part of a long command that
 -- you need to use occasionally, then use 'e' in the launch menu to edit and add the rest, like for
 -- running specific parts of test suites, put everything but the test suite name in here then edit later
-projectlaunch.add_custom_command("pnpm --prefix ./frontend run install")
+projectlaunch.add_custom_command("pnpm --prefix ./frontend run preinstall")
 projectlaunch.add_custom_command("pnpm --prefix ./frontend run start")
 projectlaunch.add_custom_command("pnpm --prefix ./frontend run generate:graphql")
 projectlaunch.add_custom_command("pnpm --prefix ./frontend run test")
