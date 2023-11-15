@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local lspconfig = require('lspconfig')
 
 lsp.preset("recommended")
 
@@ -35,20 +36,35 @@ lsp.set_preferences({
   }
 })
 
+-- this is a snippet to enable eslint autofix on save
+lspconfig.eslint.setup({
+  on_attach = function(_, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
+  end,
+})
+
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr, remap = false }
+  lsp.buffer_autoformat()
 
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
+  vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', opts)
+  vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', opts)
+
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
   vim.keymap.set('n', '<leader>vws', vim.lsp.buf.workspace_symbol, opts)
   vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, opts)
   vim.keymap.set('n', '[d', vim.diagnostic.goto_next, opts)
   vim.keymap.set('n', ']d', vim.diagnostic.goto_prev, opts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
   vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
+  vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, opts)
 end)
+
 
 lsp.setup()
 
