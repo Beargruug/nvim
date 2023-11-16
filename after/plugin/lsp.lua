@@ -36,19 +36,8 @@ lsp.set_preferences({
   }
 })
 
--- this is a snippet to enable eslint autofix on save
-lspconfig.eslint.setup({
-  on_attach = function(_, bufnr)
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      buffer = bufnr,
-      command = "EslintFixAll",
-    })
-  end,
-})
-
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr, remap = false }
-  lsp.buffer_autoformat()
 
   vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
   vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', opts)
@@ -62,9 +51,9 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
   vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
-  vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, opts)
+  vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, opts)
+  vim.keymap.set('n', '<leader>e', '<cmd>EslintFixAll<cr>', opts)
 end)
-
 
 lsp.setup()
 
