@@ -91,9 +91,6 @@ local plugins = {
   -- ('nvim-lua/popup.nvim')
   'nvim-lua/plenary.nvim',
 
-  -- Prettier
-  -- 'MunifTanjim/prettier.nvim',
-
   -- LSP
   { 'folke/lsp-colors.nvim',
     {
