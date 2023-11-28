@@ -121,7 +121,6 @@ local plugins = {
     },
   },
 
-
   "github/copilot.vim",
   "folke/zen-mode.nvim",
 }
