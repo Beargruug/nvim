@@ -24,4 +24,4 @@ telescope.setup {
 }
 vim.keymap.set('n', '<leader>gwt', ':Telescope git_worktree git_worktrees<CR>')
 vim.keymap.set('n', '<leader>gct', ':Telescope git_worktree create_git_worktree<CR>')
-vim.keymap.set('n', '<leader>gdt', ':Telescope git_worktree delete_git_worktree<CR>')
+vim.keymap.set('n', '<leader>gdt', ':lua require("git-worktree").delete_worktree(vim.fn.input("Delete worktree: "))<CR>')
