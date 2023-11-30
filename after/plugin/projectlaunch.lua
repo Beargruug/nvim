@@ -28,20 +28,21 @@ vim.keymap.set('n', "<leader>ln", projectlaunch.show_next, { noremap = true, exp
 vim.keymap.set('n', "<leader>lm", projectlaunch.show_prev, { noremap = true, expr = false, buffer = false })
 
 -- restart the command running in the currently open split terminal
-vim.keymap.set('n', "<leader>lr", projectlaunch.restart_command_in_split, { noremap = true, expr = false, buffer = false })
+vim.keymap.set('n', "<leader>lr", projectlaunch.restart_command_in_split,
+  { noremap = true, expr = false, buffer = false })
 
 -- add custom commands programmatically. you can write your own lua code to add a list of commands
 -- from a tool you use that projectlaunch.nvim doesn't support. or type part of a long command that
 -- you need to use occasionally, then use 'e' in the launch menu to edit and add the rest, like for
 -- running specific parts of test suites, put everything but the test suite name in here then edit later
-projectlaunch.add_custom_command("pnpm --prefix ./frontend run start")
-projectlaunch.add_custom_command("make start-culture-service -C ./backend-services")
-projectlaunch.add_custom_command("make start-user-service -C ./backend-services")
-projectlaunch.add_custom_command("make start-gateway -C ./backend-services")
 projectlaunch.add_custom_command("cp ../.env.local-frontend ./frontend/.env.local")
 projectlaunch.add_custom_command("cp ../.env-culture ./backend-services/apps/culture-svc/.env")
 projectlaunch.add_custom_command("cp ../.env-user ./backend-services/apps/user-svc/.env")
 projectlaunch.add_custom_command("cp ../.env-gateway ./backend-services/apps/gateway/.env")
+projectlaunch.add_custom_command("pnpm --prefix ./frontend run start")
+projectlaunch.add_custom_command("make start-culture-service -C ./backend-services")
+projectlaunch.add_custom_command("make start-user-service -C ./backend-services")
+projectlaunch.add_custom_command("make start-gateway -C ./backend-services")
 projectlaunch.add_custom_command("pnpm --prefix ./frontend install")
 projectlaunch.add_custom_command("pnpm --prefix ./frontend run generate:graphql")
 projectlaunch.add_custom_command("pnpm --prefix ./frontend run test")
