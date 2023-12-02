@@ -35,7 +35,7 @@ local plugins = {
 
   -- Blazingly fast plugins
   'ThePrimeagen/vim-be-good',
-  'ThePrimeagen/harpoon',
+  {'ThePrimeagen/harpoon', branch = 'harpoon2'},
   'ThePrimeagen/refactoring.nvim',
   'ThePrimeagen/git-worktree.nvim',
 
