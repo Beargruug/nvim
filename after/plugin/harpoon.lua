@@ -8,6 +8,7 @@ vim.keymap.set("n", "<C-b>", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<C-n>", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<C-m>", function() ui.nav_file(3) end)
 
+-- Harpoon 2 config
 -- local harpoon = require("harpoon")
 
 -- harpoon:setup()
