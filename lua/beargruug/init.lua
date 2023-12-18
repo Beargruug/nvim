@@ -1,10 +1,10 @@
-require('l9us.set')
-require('l9us.lazy')
-require('l9us.remap')
-require('l9us.globals')
+require('beargruug.set')
+require('beargruug.lazy')
+require('beargruug.remap')
+require('beargruug.globals')
 
 local augroup = vim.api.nvim_create_augroup
-local L9usGroup = augroup('L9usGroup ', {})
+local BeargruugGroup = augroup('BeargruugGroup ', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -21,7 +21,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({ "BufWritePre" }, {
-  group = L9usGroup,
+  group = BeargruugGroup,
   pattern = "*",
   command = [[%s/\s\+$//e]],
 })

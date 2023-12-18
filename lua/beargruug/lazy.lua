@@ -41,7 +41,7 @@ local plugins = {
 
   --Project launcher
   -- 'sheodox/projectlaunch.nvim',
-  "l9us/projectlaunch.nvim",
+  "beargruug/projectlaunch.nvim",
 
   -- Treesitter
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
