@@ -1,6 +1,7 @@
 require('beargruug.set')
-require('beargruug.lazy')
 require('beargruug.remap')
+
+require('beargruug.lazy')
 require('beargruug.globals')
 
 local augroup = vim.api.nvim_create_augroup
