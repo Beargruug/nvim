@@ -13,7 +13,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-
 require("lazy").setup("beargruug.plugins", {
   change_detection = {
     notify = false,

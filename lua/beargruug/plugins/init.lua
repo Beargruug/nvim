@@ -27,7 +27,10 @@ return {
     { 'nvim-treesitter/playground' },
     { 'nvim-treesitter/nvim-treesitter-context' },
 
-    { 'numToStr/Comment.nvim' },
+    {
+      'numToStr/Comment.nvim',
+      config = function() require('Comment').setup() end
+    },
     { 'JoosepAlviste/nvim-ts-context-commentstring' },
     { 'Yggdroot/indentLine' },
 
