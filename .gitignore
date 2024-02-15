@@ -1,5 +1,6 @@
 .DS_Store
 plugin/packer_compiled.lua
+db_ui/connections.json
 
 # Compiled Lua sources
 luac.out

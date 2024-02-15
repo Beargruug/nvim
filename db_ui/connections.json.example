@@ -1,0 +1,7 @@
+[
+  {
+    "url": "postgresql://user:password@localhost:5432(port)/dbName",
+    "name": "local"
+  },
+]
+
