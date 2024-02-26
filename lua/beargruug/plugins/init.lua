@@ -31,5 +31,9 @@ return {
     { 'APZelos/blamer.nvim' },
 
     { 'github/copilot.vim' },
+
+    {
+      dir = "~/personal/func-jumpr"
+    },
   }
 }
