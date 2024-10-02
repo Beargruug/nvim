@@ -7,13 +7,36 @@ return {
 
     { 'ThePrimeagen/git-worktree.nvim' },
     { 'ThePrimeagen/vim-be-good' },
-
     -- shows hex color codes in the color they represent
     {
       'norcalli/nvim-colorizer.lua',
       config = function() require("colorizer").setup() end
     },
-
+    {
+      'MunifTanjim/prettier.nvim',
+      dependencies = {
+        'jose-elias-alvarez/null-ls.nvim',
+      },
+      config = function()
+        require("prettier").setup({
+          bin = 'prettier',
+          filetypes = {
+            "css",
+            "graphql",
+            "html",
+            "javascript",
+            "javascriptreact",
+            "json",
+            "less",
+            "markdown",
+            "scss",
+            "typescript",
+            "typescriptreact",
+            "yaml",
+          },
+        })
+      end
+    },
     { 'nvim-treesitter/playground' },
     { 'nvim-treesitter/nvim-treesitter-context' },
 

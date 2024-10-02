@@ -27,7 +27,7 @@ return {
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "lua_ls"
+        "lua_ls",
       },
       handlers = {
         function(server_name)
@@ -86,4 +86,3 @@ return {
     })
   end
 }
-
