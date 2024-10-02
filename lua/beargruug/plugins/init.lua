@@ -19,7 +19,7 @@ return {
       },
       config = function()
         require("prettier").setup({
-          bin = 'prettier',
+          bin = 'prettierd',
           filetypes = {
             "css",
             "graphql",
