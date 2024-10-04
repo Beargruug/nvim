@@ -37,6 +37,17 @@ return {
 					})
 				end,
 
+				["volar"] = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.volar.setup({
+						filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+						init_options = {
+							vue = {
+								hybridMode = false,
+							},
+						},
+					})
+				end,
 				["lua_ls"] = function()
 					local lspconfig = require("lspconfig")
 					lspconfig.lua_ls.setup({
