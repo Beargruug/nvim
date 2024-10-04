@@ -17,6 +17,7 @@ return {
 			graphql = { "prettierd" },
 			liquid = { "prettierd" },
 			lua = { "stylua" },
+      ruby = { "rubocop" },
 		}
 
 		conform.setup({

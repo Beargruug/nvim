@@ -29,6 +29,8 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
+				"tailwindcss",
+				"solargraph",
 			},
 			handlers = {
 				function(server_name)
