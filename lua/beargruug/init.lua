@@ -42,8 +42,6 @@ autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
-    vim.keymap.set('n', '<leader>f', '<cmd>Prettier<cr>', opts)
-    vim.keymap.set('n', '<leader>F', vim.lsp.buf.format, opts)
   end,
 })
 
