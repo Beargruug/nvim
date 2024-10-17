@@ -29,7 +29,8 @@ return {
 				require("ts_context_commentstring").setup()
 			end,
 		},
-		{ "Yggdroot/indentLine" },
+		-- don't know if i should keep this
+		-- { "Yggdroot/indentLine" },
 
 		{ "sindrets/diffview.nvim" },
 		{ "APZelos/blamer.nvim" },
