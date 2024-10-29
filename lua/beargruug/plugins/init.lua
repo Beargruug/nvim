@@ -34,10 +34,11 @@ return {
 
 		{ "sindrets/diffview.nvim" },
 		{ "APZelos/blamer.nvim" },
+		{ "MeanderingProgrammer/render-markdown.nvim" },
 
 		{ "github/copilot.vim" },
 		{
-      "Beargruug/func-jumper.nvim",
+			"Beargruug/func-jumper.nvim",
 		},
 	},
 }
