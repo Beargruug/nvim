@@ -38,7 +38,13 @@ return {
 
 		{ "github/copilot.vim" },
 		{
-			"Beargruug/func-jumper.nvim",
+			dir = "~/personal/func-jumper",
+			config = function()
+				require("func-jumper").setup()
+			end,
 		},
+		-- {
+		-- 	"Beargruug/func-jumper.nvim",
+		-- },
 	},
 }
