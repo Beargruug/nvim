@@ -4,18 +4,18 @@ return {
 	config = function()
 		local conform = require("conform")
 		local formatters_by_ft = {
-			javascript = { "prettierd" },
-			typescript = { "prettierd" },
-			vue = { "prettierd" },
-			javascriptreact = { "prettierd" },
-			typescriptreact = { "prettierd" },
-			css = { "prettierd" },
-			html = { "prettierd" },
-			json = { "prettierd" },
-			yaml = { "prettierd" },
-			markdown = { "prettierd" },
-			graphql = { "prettierd" },
-			liquid = { "prettierd" },
+			javascript = { "prettier" },
+			typescript = { "prettier" },
+			vue = { "prettier" },
+			javascriptreact = { "prettier" },
+			typescriptreact = { "prettier" },
+			css = { "prettier" },
+			html = { "prettier" },
+			json = { "prettier" },
+			yaml = { "prettier" },
+			markdown = { "prettier" },
+			graphql = { "prettier" },
+			liquid = { "prettier" },
 			lua = { "stylua" },
       ruby = { "rubocop" },
 		}
@@ -30,7 +30,7 @@ return {
 			formatters_by_ft = formatters_by_ft,
 			formatters = {
 				injected = { options = { ignore_errors = true } },
-				prettierd = {
+				prettier = {
 					condition = function(ctx)
 						return vim.fs.find({ ".prettierrc" }, { path = ctx.filename, upward = true })[1]
 					end,
