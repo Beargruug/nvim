@@ -31,6 +31,7 @@ return {
 				"lua_ls",
 				"tailwindcss",
 				"ruby_lsp",
+				"eslint",
 			},
 			handlers = {
 				function(server_name)
@@ -48,12 +49,6 @@ return {
 								hybridMode = false,
 							},
 						},
-					})
-				end,
-				["ruby_lsp"] = function()
-					local lspconfig = require("lspconfig")
-					lspconfig.ruby_lsp.setup({
-						capabilities = capabilities,
 					})
 				end,
 				["lua_ls"] = function()
