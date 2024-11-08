@@ -38,6 +38,8 @@ vim.keymap.set("n", "<leader><leader>x", ":source %<CR>")
 
 vim.keymap.set("n", "<leader>ss", "<cmd>vsplit<CR>")
 vim.keymap.set("n", "<leader>sv", "<cmd>split<CR>")
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>e", "<cmd>EslintFixAll<CR>")
 
 vim.keymap.set("n", "<C-j>", "<C-W>j")
 vim.keymap.set("n", "<C-k>", "<C-W>k")
