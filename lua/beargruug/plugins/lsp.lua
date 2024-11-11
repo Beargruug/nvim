@@ -32,11 +32,24 @@ return {
                 "tailwindcss",
                 "ruby_lsp",
                 "eslint",
+                "volar",
             },
             handlers = {
                 function(server_name)
                     require("lspconfig")[server_name].setup({
                         capabilities = capabilities,
+                    })
+                end,
+
+                ["volar"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.volar.setup({
+                        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+                        init_options = {
+                            vue = {
+                                hybridMode = false,
+                            },
+                        },
                     })
                 end,
                 ["lua_ls"] = function()
