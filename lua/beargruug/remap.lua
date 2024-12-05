@@ -35,6 +35,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>x", ":source %<CR>")
+vim.keymap.set("n", "<leader>x", ":.lua<CR>")
+vim.keymap.set("v", "<leader>x", ":.lua<CR>")
 
 vim.keymap.set("n", "<leader>ss", "<cmd>vsplit<CR>")
 vim.keymap.set("n", "<leader>sv", "<cmd>split<CR>")
