@@ -1,11 +1,27 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+
+			"nvim-telescope/telescope-ui-select.nvim",
+		},
 		requires = {
 			"nvim-lua/plenary.nvim",
 		},
 		config = function()
-			require("telescope").setup({})
+			require("telescope").setup({
+				ions = {
+					wrap_results = true,
+
+					fzf = {},
+					["ui-select"] = {
+						require("telescope.themes").get_dropdown({}),
+					},
+				},
+			})
+			pcall(require("telescope").load_extension, "fzf")
+			pcall(require("telescope").load_extension, "ui-select")
 
 			local builtin = require("telescope.builtin")
 			-- vim.keymap.set("n", ";f", builtin.git_files, {})
@@ -13,7 +29,10 @@ return {
 			vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
 			vim.keymap.set("n", ";r", builtin.live_grep, {})
 			vim.keymap.set("n", "<c-P>", builtin.oldfiles, {})
-			vim.keymap.set("n", ";h", builtin.buffers, {})
+			-- this is awesome
+			vim.keymap.set("n", "<space>/", builtin.current_buffer_fuzzy_find)
+			--
+			vim.keymap.set("n", "<leader>b", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>pws", function()
 				local word = vim.fn.expand("<cword>")
 				builtin.grep_string({ search = word })
