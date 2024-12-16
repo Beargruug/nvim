@@ -39,6 +39,6 @@ return {
 				["g\\"] = "actions.toggle_trash",
 			},
 		})
-		vim.keymap.set("n", "sf", "<cmd>Oil<CR>")
+		vim.keymap.set("n", "<leader>sf", "<cmd>Oil<CR>")
 	end,
 }
