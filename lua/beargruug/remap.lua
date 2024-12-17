@@ -73,6 +73,6 @@ end)
 
 vim.keymap.set("n", "<leader>ship", function()
 	vim.fn.chansend(ship_cmd_id, { "git add . \r\n" })
-	vim.fn.chansend(ship_cmd_id, { "git commit -m 'update submodule' \r\n" })
+	vim.fn.chansend(ship_cmd_id, { "git commit -m 'update submodules' \r\n" })
 	vim.fn.chansend(ship_cmd_id, { "git push origin main \r\n" })
 end)
