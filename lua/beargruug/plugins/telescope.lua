@@ -3,25 +3,19 @@ return {
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-
-			"nvim-telescope/telescope-ui-select.nvim",
 		},
 		requires = {
 			"nvim-lua/plenary.nvim",
 		},
 		config = function()
 			require("telescope").setup({
-				ions = {
+				extensions = {
 					wrap_results = true,
-
 					fzf = {},
-					["ui-select"] = {
-						require("telescope.themes").get_dropdown({}),
-					},
 				},
 			})
+
 			pcall(require("telescope").load_extension, "fzf")
-			pcall(require("telescope").load_extension, "ui-select")
 
 			local builtin = require("telescope.builtin")
 			-- vim.keymap.set("n", ";f", builtin.git_files, {})
