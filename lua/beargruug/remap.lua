@@ -32,7 +32,7 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>x", ":source %<CR>")
 vim.keymap.set("n", "<leader>x", ":.lua<CR>")
@@ -50,3 +50,7 @@ vim.keymap.set("n", "<leader>l", ":put =printf('console.log(''%s:'', %s);', expa
 vim.keymap.set("n", "<leader>dv", "<cmd>:DiffviewOpen<CR>")
 vim.keymap.set("n", "<leader>dc", "<cmd>:DiffviewClose<CR>")
 vim.keymap.set("n", "<leader>cf", ":lua require('func-jumper').show_functions_window()<CR>")
+vim.keymap.set("n", "<leader>sT", "<cmd>:Floaterminal<CR>")
+vim.keymap.set("n", "<leader>st", "<cmd>:Smallterminal<CR>")
+vim.keymap.set("n", "<leader>ship", "<cmd>:ShipConfigCode<CR>")
+
