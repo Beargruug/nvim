@@ -37,14 +37,14 @@ return {
 		{ "MeanderingProgrammer/render-markdown.nvim" },
 
 		{ "github/copilot.vim" },
-		-- {
-		-- 	dir = "~/personal/func-jumper",
-		-- 	config = function()
-		-- 		require("func-jumper").setup()
-		-- 	end,
-		-- },
 		{
-			"Beargruug/func-jumper.nvim",
+			dir = "~/personal/func-jumper",
+			config = function()
+				require("func-jumper").setup()
+			end,
 		},
+		-- {
+		-- 	"Beargruug/func-jumper.nvim",
+		-- },
 	},
 }
