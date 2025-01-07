@@ -34,7 +34,7 @@ return {
 
 		{ "sindrets/diffview.nvim" },
 		{ "APZelos/blamer.nvim" },
-		{ "MeanderingProgrammer/render-markdown.nvim" },
+		-- { "MeanderingProgrammer/render-markdown.nvim" },
 
 		{ "github/copilot.vim" },
 		{
