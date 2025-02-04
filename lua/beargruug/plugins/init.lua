@@ -38,10 +38,7 @@ return {
 
 		{ "github/copilot.vim" },
 		{
-			dir = "~/personal/func-jumper",
+			dir = "~/personal/blink",
 		},
-		-- {
-		-- 	"Beargruug/func-jumper.nvim",
-		-- },
 	},
 }
