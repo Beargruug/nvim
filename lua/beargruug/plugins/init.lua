@@ -32,7 +32,7 @@ return {
 		-- don't know if i should keep this
 		-- { "Yggdroot/indentLine" },
 
-		{ "sindrets/diffview.nvim" },
+		{ "sindrets/diffview.nvim" }, -- should i keep it?
 		{ "APZelos/blamer.nvim" },
 		-- { "MeanderingProgrammer/render-markdown.nvim" },
 
