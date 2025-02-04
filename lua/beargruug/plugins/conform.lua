@@ -3,10 +3,12 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local conform = require("conform")
+		local custom_format = {
+			vue = { "eslint" },
+		}
 		local formatters_by_ft = {
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
-			vue = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			typescriptreact = { "prettierd" },
 			css = { "prettierd" },
@@ -36,7 +38,11 @@ return {
 			},
 		})
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()
-			if formatters_by_ft[vim.bo.filetype] ~= nil then
+			if custom_format[vim.bo.filetype] ~= nil then
+				if vim.fn.exists("EslintFixAll") then
+					vim.cmd("EslintFixAll")
+				end
+			elseif formatters_by_ft[vim.bo.filetype] ~= nil then
 				conform.format()
 			else
 				vim.lsp.buf.format()
