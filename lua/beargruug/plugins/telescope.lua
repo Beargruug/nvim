@@ -21,7 +21,7 @@ return {
 			-- vim.keymap.set("n", ";f", builtin.git_files, {})
 			vim.keymap.set("n", "<c-P>", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
-			vim.keymap.set("n", "<leader>pr", builtin.live_grep, {})
+			vim.keymap.set("n", "<leader>or", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>of", builtin.oldfiles, {})
 			-- this is awesome
 			vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
