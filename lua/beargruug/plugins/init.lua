@@ -40,5 +40,27 @@ return {
 		{
 			dir = "~/personal/blink",
 		},
+		{
+			dir = "~/personal/vue-i18n.nvim",
+			config = function()
+				require("vue_i18n").setup()
+			end,
+		},
+		-- {
+		-- 	dir = "~/personal/js-i18n.nvim",
+		-- 	dependencies = {
+		-- 		"neovim/nvim-lspconfig",
+		-- 		"nvim-treesitter/nvim-treesitter",
+		-- 		"nvim-lua/plenary.nvim",
+		-- 	},
+		-- 	event = { "BufReadPre", "BufNewFile" },
+		-- 	opts = {},
+		-- },
+		-- {
+		-- 	dir = "~/personal/neoally",
+		-- 	config = function()
+		-- 		require("neoally").setup()
+		-- 	end,
+		-- },
 	},
 }
