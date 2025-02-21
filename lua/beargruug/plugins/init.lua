@@ -38,7 +38,10 @@ return {
 
 		{ "github/copilot.vim" },
 		{
-			dir = "~/personal/blink",
+			dir = "~/personal/blink.nvim",
+		},
+		{
+			"beargruug/air-quality.nvim",
 		},
 		{
 			dir = "~/personal/vue-i18n.nvim",
