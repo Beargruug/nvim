@@ -41,7 +41,8 @@ return {
 			dir = "~/personal/blink.nvim",
 		},
 		{
-			"beargruug/air-quality.nvim",
+			-- "beargruug/air-quality.nvim",
+            dir = "~/personal/air-quality.nvim",
 		},
 		{
 			dir = "~/personal/vue-i18n.nvim",
