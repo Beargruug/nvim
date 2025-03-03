@@ -11,7 +11,7 @@ return {
 					hide_during_completion = false,
 					debounce = 25,
 					keymap = {
-						accept = "<CR>",
+						accept = false,
 						accept_word = false,
 						accept_line = "<Tab>",
 						next = false,
