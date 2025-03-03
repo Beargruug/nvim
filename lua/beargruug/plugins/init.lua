@@ -1,19 +1,19 @@
 return {
 	{
 		{ "nvim-lua/plenary.nvim" },
-
 		{ "tpope/vim-repeat" },
 		{ "tpope/vim-surround" },
 
 		{ "ThePrimeagen/git-worktree.nvim" },
 		{ "ThePrimeagen/vim-be-good" },
-		-- shows hex color codes in the color they represent
+
 		{
 			"norcalli/nvim-colorizer.lua",
 			config = function()
 				require("colorizer").setup()
 			end,
 		},
+
 		{ "nvim-treesitter/playground" },
 		{ "nvim-treesitter/nvim-treesitter-context" },
 
@@ -23,18 +23,21 @@ return {
 				require("Comment").setup()
 			end,
 		},
-		{
-			"JoosepAlviste/nvim-ts-context-commentstring",
-			config = function()
-				require("ts_context_commentstring").setup()
-			end,
-		},
-		-- don't know if i should keep this
-		-- { "Yggdroot/indentLine" },
-
+		-- {
+		-- replaced by folke?
+		-- 	"JoosepAlviste/nvim-ts-context-commentstring",
+		-- 	config = function()
+		-- 		require("ts_context_commentstring").setup()
+		-- 	end,
+		-- },
+		-- {
+		-- 	"folke/ts-comments.nvim",
+		-- 	opts = {},
+		-- 	event = "VeryLazy",
+		-- 	enabled = vim.fn.has("nvim-0.10.0") == 1,
+		-- },
 		{ "sindrets/diffview.nvim" }, -- should i keep it?
 		{ "APZelos/blamer.nvim" },
-		-- { "MeanderingProgrammer/render-markdown.nvim" },
 
 		{ "github/copilot.vim" },
 		{
@@ -42,7 +45,7 @@ return {
 		},
 		{
 			-- "beargruug/air-quality.nvim",
-            dir = "~/personal/air-quality.nvim",
+			dir = "~/personal/air-quality.nvim",
 		},
 		{
 			dir = "~/personal/vue-i18n.nvim",
