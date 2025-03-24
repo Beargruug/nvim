@@ -41,7 +41,7 @@ return {
 
 		{ "github/copilot.vim" },
 		{
-			dir = "~/personal/blink.nvim",
+			dir = "~/personal/skipper.nvim",
 		},
 		{
 			-- "beargruug/air-quality.nvim",
