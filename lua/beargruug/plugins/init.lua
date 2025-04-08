@@ -16,6 +16,11 @@ return {
 
 		{ "nvim-treesitter/playground" },
 		{ "nvim-treesitter/nvim-treesitter-context" },
+		{
+			"thenbe/markdown-todo.nvim",
+			ft = { "md", "markdown" },
+			config = true,
+		},
 
 		{
 			"numToStr/Comment.nvim",
