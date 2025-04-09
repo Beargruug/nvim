@@ -1,5 +1,6 @@
 require("beargruug.set")
 require("beargruug.remap")
+require("beargruug.remap")
 
 require("beargruug.lazy")
 require("beargruug.globals")
@@ -26,6 +27,7 @@ autocmd({ "BufWritePre" }, {
 	pattern = "*",
 	command = [[%s/\s\+$//e]],
 })
+
 autocmd("LspAttach", {
 	group = BeargruugGroup,
 	callback = function(e)
