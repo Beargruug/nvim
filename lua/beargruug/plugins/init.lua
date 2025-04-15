@@ -35,9 +35,5 @@ return {
 		{
 			dir = "~/personal/skipper.nvim",
 		},
-		{
-			-- "beargruug/air-quality.nvim",
-			dir = "~/personal/air-quality.nvim",
-		},
 	},
 }
