@@ -7,13 +7,6 @@ return {
 		{ "ThePrimeagen/git-worktree.nvim" },
 		{ "ThePrimeagen/vim-be-good" },
 
-		{
-			"norcalli/nvim-colorizer.lua",
-			config = function()
-				require("colorizer").setup()
-			end,
-		},
-
 		{ "nvim-treesitter/playground" },
 		{ "nvim-treesitter/nvim-treesitter-context" },
 		{
@@ -31,7 +24,7 @@ return {
 		{ "sindrets/diffview.nvim" }, -- should i keep it?
 		{ "APZelos/blamer.nvim" },
 
-		{ "github/copilot.vim" },
+		-- { "github/copilot.vim" },
 		{
 			dir = "~/personal/skipper.nvim",
 		},
