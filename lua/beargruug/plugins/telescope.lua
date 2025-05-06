@@ -8,7 +8,13 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 		config = function()
-			require("telescope").setup({})
+			require("telescope").setup({
+				defaults = {
+					layout_config = {
+						preview_width = 0,
+					},
+				},
+			})
 
 			pcall(require("telescope").load_extension, "fzf")
 
@@ -19,7 +25,6 @@ return {
 			vim.keymap.set("n", "<leader>of", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
 			vim.keymap.set("n", "<leader>b", builtin.buffers, {})
-
 			vim.keymap.set("n", "<leader>gwt", ":Telescope git_worktree git_worktrees<CR>")
 			vim.keymap.set("n", "<leader>gct", ":Telescope git_worktree create_git_worktree<CR>")
 			vim.keymap.set(
