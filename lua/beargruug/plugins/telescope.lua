@@ -8,33 +8,17 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 		config = function()
-			require("telescope").setup({
-				extensions = {
-					wrap_results = true,
-					fzf = {},
-				},
-			})
+			require("telescope").setup({})
 
 			pcall(require("telescope").load_extension, "fzf")
 
 			local builtin = require("telescope.builtin")
-			-- vim.keymap.set("n", ";f", builtin.git_files, {})
 			vim.keymap.set("n", "<c-P>", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>or", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>of", builtin.oldfiles, {})
-			-- this is awesome
 			vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
-			--
 			vim.keymap.set("n", "<leader>b", builtin.buffers, {})
-			-- vim.keymap.set("n", "<leader>pws", function()
-			-- 	local word = vim.fn.expand("<cword>")
-			-- 	builtin.grep_string({ search = word })
-			-- end)
-			-- vim.keymap.set("n", "<leader>pWs", function()
-			-- 	local word = vim.fn.expand("<cWORD>")
-			-- 	builtin.grep_string({ search = word })
-			-- end)
 
 			vim.keymap.set("n", "<leader>gwt", ":Telescope git_worktree git_worktrees<CR>")
 			vim.keymap.set("n", "<leader>gct", ":Telescope git_worktree create_git_worktree<CR>")
