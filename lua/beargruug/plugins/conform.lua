@@ -39,8 +39,8 @@ return {
 		})
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()
 			if custom_format[vim.bo.filetype] ~= nil then
-				if vim.fn.exists("EslintFixAll") then
-					vim.cmd("EslintFixAll")
+				if vim.fn.exists("LspEslintFixAll") then
+					vim.cmd("LspEslintFixAll")
 				end
 			elseif formatters_by_ft[vim.bo.filetype] ~= nil then
 				conform.format()
