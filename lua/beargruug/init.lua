@@ -1,6 +1,5 @@
 require("beargruug.set")
 require("beargruug.remap")
-require("beargruug.remap")
 
 require("beargruug.lazy")
 require("beargruug.globals")
