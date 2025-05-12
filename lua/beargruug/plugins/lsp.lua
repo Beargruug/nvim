@@ -29,10 +29,7 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"tailwindcss",
 				"ruby_lsp",
-				"eslint",
-				"volar",
 			},
 			handlers = {
 				function(server_name)
