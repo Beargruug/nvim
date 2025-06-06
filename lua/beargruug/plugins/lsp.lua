@@ -37,13 +37,6 @@ return {
             capabilities = capabilities,
           })
         end,
-        ['ruby_lsp'] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.ruby_lsp.setup({
-            capabilities = capabilities,
-            cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") }
-          })
-        end,
         ["lua_ls"] = function()
           local lspconfig = require("lspconfig")
           lspconfig.lua_ls.setup({
