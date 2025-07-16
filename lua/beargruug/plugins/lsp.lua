@@ -35,6 +35,7 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
+                "ruby_lsp"
             },
             handlers = {
                 function(server_name)
@@ -59,6 +60,14 @@ return {
                         }
                     }
                 end,
+                require('lspconfig').ruby_lsp.setup({
+                    init_options = {
+                        enabledFeatures = {
+                            diagnostics = false,
+                            formatting = false,
+                        },
+                    }
+                })
             }
         })
 
