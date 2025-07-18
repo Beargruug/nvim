@@ -21,7 +21,6 @@ return {
         end,
     },
     { "sindrets/diffview.nvim" }, -- should i keep it?
-    { "APZelos/blamer.nvim" },
 
     -- { "github/copilot.vim" },
     {
