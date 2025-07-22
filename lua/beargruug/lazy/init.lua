@@ -7,7 +7,6 @@ return {
     { "ThePrimeagen/vim-be-good" },
 
     { "nvim-treesitter/playground" },
-    { "nvim-treesitter/nvim-treesitter-context" },
     {
         "thenbe/markdown-todo.nvim",
         ft = { "md", "markdown" },
