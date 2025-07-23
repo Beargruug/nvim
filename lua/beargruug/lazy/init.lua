@@ -19,7 +19,10 @@ return {
             require("Comment").setup()
         end,
     },
-    { "sindrets/diffview.nvim" }, -- should i keep it?
+    {
+        "sindrets/diffview.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
 
     -- { "github/copilot.vim" },
     {
