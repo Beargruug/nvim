@@ -35,6 +35,10 @@ return {
             })
         end, { desc = "Debug: Running Nearest Test" })
 
+        vim.keymap.set("n", "<leader>tcf", function()
+            require("neotest").run.run(vim.fn.expand("%"))
+        end, { desc = "Debug: Running File" })
+
         vim.keymap.set("n", "<leader>tv", function()
             require("neotest").summary.toggle()
         end, { desc = "Debug: Summary Toggle" })
