@@ -27,9 +27,6 @@ return {
 			cmp_lsp.default_capabilities()
 		)
 
-		-- fix "WARNING Found buffers attached to multiple clients"
-		capabilities.offsetEncoding = "utf-16"
-
 		require("fidget").setup({})
 		require("mason").setup()
 		require("mason-lspconfig").setup({
