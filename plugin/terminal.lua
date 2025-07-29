@@ -19,6 +19,7 @@ local toggle_small_terminal = function()
 end
 
 local ship_config_code = function()
+    vim.fn.chansend(ship_cmd_id, { "cd ~/.dotfiles \r\n" })
     vim.fn.chansend(ship_cmd_id, { "git add . \r\n" })
     vim.fn.chansend(ship_cmd_id, { "git commit -m 'update submodules' \r\n" })
     vim.fn.chansend(ship_cmd_id, { "git push origin main \r\n" })
