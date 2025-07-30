@@ -58,17 +58,15 @@ return {
 						},
 					})
 				end,
-				["ruby_lsp"] = function()
-					require("lspconfig").ruby_lsp.setup({
-						capabilities = capabilities,
-						init_options = {
-							enabledFeatures = {
-								diagnostics = false,
-								formatting = false,
-							},
+                -- don't know why this syntax is needed
+				require("lspconfig").ruby_lsp.setup({
+					init_options = {
+						enabledFeatures = {
+							diagnostics = false,
+							formatting = false,
 						},
-					})
-				end,
+					},
+				}),
 			},
 		})
 
