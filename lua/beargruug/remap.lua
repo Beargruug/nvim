@@ -48,4 +48,5 @@ vim.keymap.set("n", "<leader>dc", "<cmd>:DiffviewClose<CR>")
 vim.keymap.set("n", "<leader>cf", "<cmd>:ShowFunctionsWindow<CR>")
 vim.keymap.set("n", "<leader>st", "<cmd>:Smallterminal<CR>")
 vim.keymap.set("n", "<leader>ship", "<cmd>:ShipConfigCode<CR>")
+vim.keymap.set("n", "<leader>baum", "<cmd>:NvimTreeFindFileToggle<CR>")
 
