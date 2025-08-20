@@ -18,6 +18,9 @@ return {
 						location = "~/",
 					},
 				},
+				right = {
+					enabled = false,
+				},
 				bo = {
 					filetype = "md",
 				},
