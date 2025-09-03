@@ -20,6 +20,7 @@ return {
 					vim.keymap.set("n", "<leader>p", function()
 						vim.cmd.Git("push")
 					end, opts)
+					vim.keymap.set("n", "<leader>pf", "<Nop>", opts)
 
 					-- rebase always
 					vim.keymap.set("n", "<leader>P", ":Git pull --rebase <cr>", opts)
