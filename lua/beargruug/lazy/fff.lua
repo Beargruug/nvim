@@ -8,6 +8,15 @@ return {
 		},
 	},
 	lazy = false,
+	keys = {
+		{
+			"<leader>vf", -- try it if you didn't it is a banger keybinding for a picker
+			function()
+				require("fff").find_files()
+			end,
+			desc = "FFFind files",
+		},
+	},
 	config = function()
 		local fff = require("fff")
 		fff.setup({
@@ -18,7 +27,7 @@ return {
 				show_file_info = false,
 			},
 			keymaps = {
-				close = {"<Esc>", "<C-c>"},
+				close = { "<Esc>", "<C-c>" },
 				select = "<CR>",
 				select_split = "<C-s>",
 				select_vsplit = "<C-v>",
