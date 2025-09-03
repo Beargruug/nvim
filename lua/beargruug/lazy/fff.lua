@@ -8,15 +8,6 @@ return {
 		},
 	},
 	lazy = false,
-	keys = {
-		{
-			"<leader>pf", -- try it if you didn't it is a banger keybinding for a picker
-			function()
-				require("fff").find_files()
-			end,
-			desc = "FFFind files",
-		},
-	},
 	config = function()
 		local fff = require("fff")
 		fff.setup({

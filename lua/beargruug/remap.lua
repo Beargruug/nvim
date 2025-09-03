@@ -43,3 +43,4 @@ vim.keymap.set("n", "<leader>l", ":put =printf('console.log(''%s:'', %s);', expa
 vim.keymap.set("n", "<leader>dv", "<cmd>:DiffviewOpen<CR>")
 vim.keymap.set("n", "<leader>dc", "<cmd>:DiffviewClose<CR>")
 vim.keymap.set("n", "<leader>cf", "<cmd>:ShowFunctionsWindow<CR>")
+vim.keymap.set("n", "<leader>pf", "<cmd>:FFFFind<CR>")
