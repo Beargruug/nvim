@@ -23,8 +23,8 @@ return {
 		"sindrets/diffview.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
+	{ "tjdevries/present.nvim" },
 
-	-- { "github/copilot.vim" },
 	{
 		dir = "~/personal/skipper.nvim",
 	},
