@@ -28,6 +28,7 @@ return {
 			})
 
 			-- vim.cmd("colorscheme kanagawa-wave")
+			-- ColorMyPencils("kanagawa-wave")
 		end,
 	},
 	{
