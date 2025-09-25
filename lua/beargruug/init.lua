@@ -31,10 +31,10 @@ autocmd("LspAttach", {
 	group = BeargruugGroup,
 	callback = function(e)
 		local opts = { buffer = e.buffer }
-		-- vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 		vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "<leader>vrr", "<cmd>Telescope lsp_references<cr>", opts)
 		vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
 		vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
 		vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
