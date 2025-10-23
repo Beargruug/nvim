@@ -3,6 +3,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+			"nvim-telescope/telescope-smart-history.nvim",
 		},
 		requires = {
 			"nvim-lua/plenary.nvim",
@@ -14,12 +15,16 @@ return {
 					-- 	preview_width = 0,
 					-- },
 				},
+				extensions = {
+					wrap_results = true,
+					fzf = {},
+				},
 			})
 
 			pcall(require("telescope").load_extension, "fzf")
 
 			local builtin = require("telescope.builtin")
-            -- test out fff nvim for better search
+			-- test out fff nvim for better search
 			-- vim.keymap.set("n", "<c-P>", builtin.find_files, {})
 			vim.keymap.set("n", "<c-P>", builtin.git_files, {})
 			vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
@@ -28,6 +33,9 @@ return {
 			vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
 			vim.keymap.set("n", "<leader>b", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>gwb", ":Telescope git_branches<CR>")
+			vim.keymap.set("n", "<leader>sn", function()
+				builtin.find_files({ cwd = vim.fn.stdpath("config") })
+			end)
 			vim.keymap.set("n", "<leader>gwt", ":Telescope git_worktree git_worktrees<CR>")
 			vim.keymap.set("n", "<leader>gct", ":Telescope git_worktree create_git_worktree<CR>")
 			vim.keymap.set(
