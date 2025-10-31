@@ -37,7 +37,7 @@ return {
 			},
 			handlers = {
 				function(server_name)
-					vim.lsp.config(server_name, {
+					require("lspconfig")[server_name].setup({
 						capabilities = capabilities,
 					})
 				end,
@@ -59,7 +59,13 @@ return {
 				end,
 				-- don't know why this syntax is needed
 				vim.lsp.config("ruby_lsp", {
+					capabilities = capabilities,
 					init_options = {
+						addonSettings = {
+							["Ruby LSP Rails"] = {
+								enablePendingMigrationsPrompt = true,
+							},
+						},
 						enabledFeatures = {
 							diagnostics = false,
 							formatting = false,
