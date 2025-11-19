@@ -10,11 +10,15 @@ return {
 		},
 		config = function()
 			require("telescope").setup({
-				defaults = {
-					-- layout_config = {
-					-- 	preview_width = 0,
-					-- },
-				},
+				defaults = require("telescope.themes").get_ivy({
+					layout_config = {
+						bottom_pane = {
+							height = 0.9,
+							preview_cutoff = 120,
+							prompt_position = "top",
+						},
+					},
+				}),
 				extensions = {
 					wrap_results = true,
 					fzf = {},
