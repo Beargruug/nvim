@@ -28,4 +28,10 @@ return {
 	{
 		dir = "~/personal/skipper.nvim",
 	},
+	{
+		dir = "~/personal/xls-viewer.nvim",
+		config = function()
+			require("xls-viewer").setup()
+		end,
+	},
 }
