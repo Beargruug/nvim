@@ -25,6 +25,8 @@ return {
 	},
 	{ "tjdevries/present.nvim" },
 
+	{ "github/copilot.vim" },
+
 	{
 		dir = "~/personal/skipper.nvim",
 	},
