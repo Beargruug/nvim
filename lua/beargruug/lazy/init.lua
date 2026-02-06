@@ -5,6 +5,7 @@ return {
 
 	{ "ThePrimeagen/git-worktree.nvim" },
 	{ "ThePrimeagen/vim-be-good" },
+	{ "Yggdroot/indentLine" },
 
 	{ "nvim-treesitter/playground" },
 	{
