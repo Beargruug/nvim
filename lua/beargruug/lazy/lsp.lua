@@ -59,6 +59,7 @@ return {
 				end,
 				-- don't know why this syntax is needed
 				vim.lsp.config("ruby_lsp", {
+					cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
 					capabilities = capabilities,
 					init_options = {
 						addonSettings = {
