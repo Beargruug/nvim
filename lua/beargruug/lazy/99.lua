@@ -9,7 +9,7 @@ return {
 		local cwd = vim.uv.cwd()
 		local basename = vim.fs.basename(cwd)
 		_99.setup({
-            model = "github-copilot/claude-opus-4.5",
+			model = "github-copilot/claude-opus-4.5",
 			logger = {
 				level = _99.DEBUG,
 				path = "/tmp/" .. basename .. ".99.debug",
@@ -27,37 +27,34 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>9ff", function()
-			_99.fill_in_function()
+		vim.keymap.set("n", "<leader>9s", function()
+			_99.search()
 		end)
-		vim.keymap.set("n", "<leader>9fp", function()
-			_99.fill_in_function_prompt()
-		end)
-		-- vim.keymap.set("n", "<leader>9fd", function()
-		-- 	_99.fill_in_function({
-		-- 		additional_rules = {
-		-- 			_99:rule_from_path("~/.behaviors/debug.md"),
-		-- 		},
-		-- 	})
-		-- end)
+
 		vim.keymap.set("v", "<leader>9vv", function()
 			_99.visual()
 		end)
+
 		vim.keymap.set("v", "<leader>9vp", function()
 			_99.visual_prompt()
 		end)
-		vim.keymap.set("n", "<leader>9s", function()
+
+		vim.keymap.set("n", "<leader>9x", function()
 			_99.stop_all_requests()
 		end)
+
 		vim.keymap.set("n", "<leader>9i", function()
 			_99.info()
 		end)
+
 		vim.keymap.set("n", "<leader>9l", function()
 			_99.view_logs()
 		end)
+
 		vim.keymap.set("n", "<leader>9n", function()
 			_99.next_request_logs()
 		end)
+
 		vim.keymap.set("n", "<leader>9p", function()
 			_99.prev_request_logs()
 		end)
