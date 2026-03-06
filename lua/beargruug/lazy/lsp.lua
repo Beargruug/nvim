@@ -62,14 +62,12 @@ return {
 					cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
 					capabilities = capabilities,
 					init_options = {
+						formatter = "standard",
+						linters = { "standard" },
 						addonSettings = {
 							["Ruby LSP Rails"] = {
 								enablePendingMigrationsPrompt = true,
 							},
-						},
-						enabledFeatures = {
-							diagnostics = false,
-							formatting = false,
 						},
 					},
 				}),
