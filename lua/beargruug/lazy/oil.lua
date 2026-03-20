@@ -42,7 +42,9 @@ return {
 				["g\\"] = "actions.toggle_trash",
 			},
 		})
+
 		vim.keymap.set("n", "<leader>sf", "<cmd>Oil<CR>")
+
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = "oil",
 			callback = function()
