@@ -17,7 +17,7 @@ return function(opts)
 			["v"] = "*.vim",
 			["n"] = "*.{vim,lua}",
 			["c"] = "*.c",
-			["r"] = "*.rs",
+			["r"] = "*.rb",
 			["g"] = "*.go",
 		}
 	opts.pattern = opts.pattern or "%s"
