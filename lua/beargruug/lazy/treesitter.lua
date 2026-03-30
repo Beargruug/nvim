@@ -15,7 +15,6 @@ return {
 				"typescript",
 				"c",
 				"lua",
-				"rust",
 				"jsdoc",
 				"bash",
 				"go",
