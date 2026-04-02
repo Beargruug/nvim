@@ -8,30 +8,6 @@ end
 
 return {
 	{
-		"rebelot/kanagawa.nvim",
-		name = "kanagawa",
-		config = function()
-			require("kanagawa").setup({
-				undercurl = true,
-				commentStyle = { italic = false },
-				functionStyle = { italic = false },
-				keywordStyle = { italic = false },
-				statementStyle = { bold = true, italic = false },
-				typeStyle = {},
-				variablebuiltinStyle = { italic = false },
-				specialReturn = true,
-				specialException = true,
-				transparent = false,
-				dimInactive = false,
-				globalStatus = false,
-				terminalColors = true,
-			})
-
-			-- vim.cmd("colorscheme kanagawa-wave")
-			-- ColorMyPencils("kanagawa-wave")
-		end,
-	},
-	{
 		"rose-pine/neovim",
 		name = "rose-pine",
 		config = function()
