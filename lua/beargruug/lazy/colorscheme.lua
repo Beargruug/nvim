@@ -4,6 +4,8 @@ function ColorMyPencils(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#000000" })
+	vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#000000" })
 end
 
 return {
@@ -15,7 +17,6 @@ return {
 				disable_background = true,
 				styles = {
 					italic = false,
-                    transparency = true,
 				},
 			})
 
