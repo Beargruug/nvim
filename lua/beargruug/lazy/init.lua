@@ -35,4 +35,7 @@ return {
 			require("xls-viewer").setup()
 		end,
 	},
+
+    -- test some plugins
+	{ "lewis6991/gitsigns.nvim" },
 }
