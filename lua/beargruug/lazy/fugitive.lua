@@ -25,6 +25,11 @@ return {
 					vim.keymap.set("n", "<leader>P", ":Git pull --rebase <cr>", opts)
 
 					vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts)
+
+					vim.keymap.set("n", "dv", "<cmd>DiffviewOpen<CR>", {
+						buffer = true,
+						remap = false,
+					})
 				end,
 			})
 
