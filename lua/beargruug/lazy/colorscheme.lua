@@ -19,6 +19,13 @@ return {
 					italic = false,
 				},
 			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "diff",
+				callback = function()
+					vim.cmd("syntax enable")
+					vim.bo.syntax = "diff"
+				end,
+			})
 
 			ColorMyPencils()
 		end,
