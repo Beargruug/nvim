@@ -36,6 +36,5 @@ return {
 		end,
 	},
 
-	-- test some plugins
 	{ "lewis6991/gitsigns.nvim" },
 }
