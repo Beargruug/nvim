@@ -3,22 +3,9 @@ return {
 	lazy = false,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		{
-			"j-hui/fidget.nvim",
-			opts = {
-				notification = {
-					window = {
-						winblend = 0,
-						relative = "editor",
-					},
-				},
-			},
-		},
+		"j-hui/fidget.nvim",
 	},
 	opts = {
 		disable_mouse = false,
-		callback = function(text)
-			require("fidget").notify(text)
-		end,
 	},
 }
