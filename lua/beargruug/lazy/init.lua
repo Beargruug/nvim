@@ -1,30 +1,23 @@
 return {
-	{ "nvim-lua/plenary.nvim" },
-	{ "tpope/vim-repeat" },
-	{ "tpope/vim-surround" },
+	{ "nvim-lua/plenary.nvim", lazy = true },
+	{ "tpope/vim-repeat", event = "VeryLazy" },
+	{ "tpope/vim-surround", event = "VeryLazy" },
 
-	{ "ThePrimeagen/git-worktree.nvim" },
-	{ "ThePrimeagen/vim-be-good" },
-	{ "Yggdroot/indentLine" },
+	{ "ThePrimeagen/vim-be-good", cmd = "VimBeGood" },
 	{
 		"thenbe/markdown-todo.nvim",
-		ft = { "md", "markdown" },
+		ft = "markdown",
 		config = true,
 	},
 
 	{
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	},
-
-	{
 		"sindrets/diffview.nvim",
+		cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory", "DiffviewToggleFiles" },
+		keys = { "<leader>dv", "<leader>dq" },
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 
-	{ "github/copilot.vim" },
+	{ "github/copilot.vim", event = "InsertEnter" },
 
 	{
 		dir = "~/personal/skipper.nvim",
@@ -38,13 +31,12 @@ return {
 
 	{
 		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup({
-				signs = {
-					add = { text = "+" },
-					change = { text = "/" },
-				},
-			})
-		end,
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {
+			signs = {
+				add = { text = "+" },
+				change = { text = "/" },
+			},
+		},
 	},
 }

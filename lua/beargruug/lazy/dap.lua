@@ -34,10 +34,10 @@ end
 return {
 	{
 		"mfussenegger/nvim-dap",
-		lazy = false,
+		keys = { "<F8>", "<F10>", "<F11>", "<F12>", "<leader>b", "<leader>B" },
+		dependencies = { "jay-babu/mason-nvim-dap.nvim" },
 		config = function()
 			local dap = require("dap")
-			dap.set_log_level("DEBUG")
 
 			vim.keymap.set("n", "<F8>", dap.continue, { desc = "Debug: Continue" })
 			vim.keymap.set("n", "<F10>", dap.step_over, { desc = "Debug: Step Over" })
@@ -53,6 +53,7 @@ return {
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+		keys = { "<leader>dr", "<leader>ds", "<leader>dw", "<leader>db", "<leader>dS", "<leader>dc" },
 		config = function()
 			local dap = require("dap")
 			local dapui = require("dapui")
@@ -149,11 +150,8 @@ return {
 
 	{
 		"jay-babu/mason-nvim-dap.nvim",
-		dependencies = {
-			"williamboman/mason.nvim",
-			"mfussenegger/nvim-dap",
-			"neovim/nvim-lspconfig",
-		},
+		lazy = true,
+		dependencies = { "mason-org/mason.nvim" },
 		config = function()
 			require("mason-nvim-dap").setup({
 				ensure_installed = {},

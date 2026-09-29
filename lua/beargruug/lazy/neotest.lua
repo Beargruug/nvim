@@ -1,10 +1,11 @@
 return {
 	"nvim-neotest/neotest",
+	keys = { "<leader>tr", "<leader>tcf", "<leader>tv", "<leader>ts", "<leader>td", "<leader>to", "<leader>ta" },
 	dependencies = {
 		"nvim-neotest/nvim-nio",
 		"nvim-lua/plenary.nvim",
-		"antoinemadec/FixCursorHold.nvim",
-		"nvim-treesitter/nvim-treesitter",
+		-- branch must match lua/beargruug/lazy/treesitter.lua or lazy merges the specs inconsistently
+		{ "nvim-treesitter/nvim-treesitter", branch = "main" },
 		"olimorris/neotest-rspec",
 	},
 	config = function()
@@ -17,8 +18,9 @@ return {
 							"exec",
 							"-it",
 							"-w",
-							"/workspaces/datapool",
-							"88568bb11f09",
+							vim.env.RSPEC_WORKDIR or "/workspaces/datapool",
+							-- container IDs change on every recreate; export RSPEC_CONTAINER to override
+							vim.env.RSPEC_CONTAINER or "88568bb11f09",
 							"bash",
 							"-l",
 							"bundle",
@@ -61,6 +63,7 @@ return {
 			require("neotest").run.run({
 				suite = false,
 				testify = true,
+				strategy = "dap",
 			})
 		end, { desc = "Debug: Debug Nearest Test" })
 
@@ -70,6 +73,6 @@ return {
 
 		vim.keymap.set("n", "<leader>ta", function()
 			require("neotest").run.run(vim.fn.getcwd())
-		end, { desc = "Debug: Open test output" })
+		end, { desc = "Test: Run all tests" })
 	end,
 }

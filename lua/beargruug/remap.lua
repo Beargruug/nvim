@@ -17,15 +17,17 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y', { noremap = true })
 
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+-- <leader>d is a prefix for the dap + diffview maps, so blackhole-delete lives on <leader>D
+vim.keymap.set({ "n", "v" }, "<leader>D", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.local/bin/tmux-sessionizer<CR>")
 
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- quickfix nav; <C-j>/<C-k> are taken by window nav below
+vim.keymap.set("n", "]q", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "[q", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
@@ -41,5 +43,6 @@ vim.keymap.set("n", "<C-h>", "<C-W>h")
 vim.keymap.set("n", "<C-l>", "<C-W>l")
 vim.keymap.set("n", "<leader>l", ":put =printf('console.log(''%s:'', %s);', expand('<cword>'), expand('<cword>'))<CR>")
 vim.keymap.set("n", "<leader>dv", "<cmd>:DiffviewOpen<CR>")
-vim.keymap.set("n", "<leader>dc", "<cmd>:DiffviewClose<CR>")
+-- <leader>dc belongs to nvim-dap (toggle console)
+vim.keymap.set("n", "<leader>dq", "<cmd>:DiffviewClose<CR>")
 vim.keymap.set("n", "<leader>cf", "<cmd>:ShowFunctionsWindow<CR>")
