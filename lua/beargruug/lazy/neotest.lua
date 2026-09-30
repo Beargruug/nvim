@@ -1,6 +1,6 @@
 return {
 	"nvim-neotest/neotest",
-	keys = { "<leader>tr", "<leader>tcf", "<leader>tv", "<leader>ts", "<leader>td", "<leader>to", "<leader>ta" },
+	keys = { "<leader>tr", "<leader>tcf", "<leader>tv", "<leader>ts", "<leader>to", "<leader>ta" },
 	dependencies = {
 		"nvim-neotest/nvim-nio",
 		"nvim-lua/plenary.nvim",
@@ -16,11 +16,12 @@ return {
 						return {
 							"docker",
 							"exec",
-							"-it",
+							-- no -t: a TTY is only available under neotest's pty strategy
+							"-i",
 							"-w",
 							vim.env.RSPEC_WORKDIR or "/workspaces/datapool",
-							-- container IDs change on every recreate; export RSPEC_CONTAINER to override
-							vim.env.RSPEC_CONTAINER or "88568bb11f09",
+							-- compose derives this name deterministically, so it survives rebuilds
+							vim.env.RSPEC_CONTAINER or "devcontainer-app-1",
 							"bash",
 							"-l",
 							"bundle",
@@ -58,14 +59,6 @@ return {
 				testify = true,
 			})
 		end, { desc = "Debug: Running Test Suite" })
-
-		vim.keymap.set("n", "<leader>td", function()
-			require("neotest").run.run({
-				suite = false,
-				testify = true,
-				strategy = "dap",
-			})
-		end, { desc = "Debug: Debug Nearest Test" })
 
 		vim.keymap.set("n", "<leader>to", function()
 			require("neotest").output.open()

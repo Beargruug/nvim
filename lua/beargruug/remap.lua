@@ -17,7 +17,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y', { noremap = true })
 
--- <leader>d is a prefix for the dap + diffview maps, so blackhole-delete lives on <leader>D
+-- <leader>d is a prefix for the diffview maps, so blackhole-delete lives on <leader>D
 vim.keymap.set({ "n", "v" }, "<leader>D", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -43,6 +43,5 @@ vim.keymap.set("n", "<C-h>", "<C-W>h")
 vim.keymap.set("n", "<C-l>", "<C-W>l")
 vim.keymap.set("n", "<leader>l", ":put =printf('console.log(''%s:'', %s);', expand('<cword>'), expand('<cword>'))<CR>")
 vim.keymap.set("n", "<leader>dv", "<cmd>:DiffviewOpen<CR>")
--- <leader>dc belongs to nvim-dap (toggle console)
 vim.keymap.set("n", "<leader>dq", "<cmd>:DiffviewClose<CR>")
 vim.keymap.set("n", "<leader>cf", "<cmd>:ShowFunctionsWindow<CR>")
