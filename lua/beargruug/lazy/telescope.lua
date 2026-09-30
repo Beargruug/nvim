@@ -1,22 +1,38 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-		dependencies = {
-			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-			"nvim-telescope/telescope-smart-history.nvim",
+		cmd = "Telescope",
+		keys = {
+			"<leader>vf",
+			"<c-P>",
+			"<leader>vh",
+			"<leader>of",
+			"<leader>/",
+			"<leader>or",
+			"<leader>cb",
+			"<leader>gwb",
+			"<leader>sn",
+			"<leader>gwt",
+			"<leader>gct",
+			"<leader>gdt",
 		},
-		requires = {
+		dependencies = {
 			"nvim-lua/plenary.nvim",
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+			"ThePrimeagen/git-worktree.nvim",
 		},
 		config = function()
 			require("telescope").setup({
-				extensions = {
+				defaults = {
 					wrap_results = true,
+				},
+				extensions = {
 					fzf = {},
 				},
 			})
 
 			pcall(require("telescope").load_extension, "fzf")
+			pcall(require("telescope").load_extension, "git_worktree")
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>vf", builtin.find_files, {})

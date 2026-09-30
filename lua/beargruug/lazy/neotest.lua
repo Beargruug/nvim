@@ -1,10 +1,11 @@
 return {
 	"nvim-neotest/neotest",
+	keys = { "<leader>tr", "<leader>tcf", "<leader>tv", "<leader>ts", "<leader>to", "<leader>ta" },
 	dependencies = {
 		"nvim-neotest/nvim-nio",
 		"nvim-lua/plenary.nvim",
-		"antoinemadec/FixCursorHold.nvim",
-		"nvim-treesitter/nvim-treesitter",
+		-- branch must match lua/beargruug/lazy/treesitter.lua or lazy merges the specs inconsistently
+		{ "nvim-treesitter/nvim-treesitter", branch = "main" },
 		"olimorris/neotest-rspec",
 	},
 	config = function()
@@ -15,10 +16,12 @@ return {
 						return {
 							"docker",
 							"exec",
-							"-it",
+							-- no -t: a TTY is only available under neotest's pty strategy
+							"-i",
 							"-w",
-							"/workspaces/datapool",
-							"88568bb11f09",
+							vim.env.RSPEC_WORKDIR or "/workspaces/datapool",
+							-- compose derives this name deterministically, so it survives rebuilds
+							vim.env.RSPEC_CONTAINER or "devcontainer-app-1",
 							"bash",
 							"-l",
 							"bundle",
@@ -57,19 +60,12 @@ return {
 			})
 		end, { desc = "Debug: Running Test Suite" })
 
-		vim.keymap.set("n", "<leader>td", function()
-			require("neotest").run.run({
-				suite = false,
-				testify = true,
-			})
-		end, { desc = "Debug: Debug Nearest Test" })
-
 		vim.keymap.set("n", "<leader>to", function()
 			require("neotest").output.open()
 		end, { desc = "Debug: Open test output" })
 
 		vim.keymap.set("n", "<leader>ta", function()
 			require("neotest").run.run(vim.fn.getcwd())
-		end, { desc = "Debug: Open test output" })
+		end, { desc = "Test: Run all tests" })
 	end,
 }

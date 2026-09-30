@@ -3,14 +3,17 @@ local finders = require("telescope.finders")
 local make_entry = require("telescope.make_entry")
 local pickers = require("telescope.pickers")
 
-local flatten = vim.tbl_flatten
+-- vim.tbl_flatten is deprecated and removed in 0.13
+local function flatten(t)
+	return vim.iter(t):flatten():totable()
+end
 
 -- i would like to be able to do telescope
 -- and have telescope do some filtering on files and some grepping
 
 return function(opts)
 	opts = opts or {}
-	opts.cwd = opts.cwd and vim.fn.expand(opts.cwd) or vim.loop.cwd()
+	opts.cwd = opts.cwd and vim.fn.expand(opts.cwd) or vim.uv.cwd()
 	opts.shortcuts = opts.shortcuts
 		or {
 			["l"] = "*.lua",
