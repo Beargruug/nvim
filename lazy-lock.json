@@ -25,7 +25,7 @@
   "neotest-rspec": { "branch": "main", "commit": "7629f8c2837becb72090fbafce58506bb56a00f0" },
   "nui.nvim": { "branch": "main", "commit": "10fc361835c856ba4233ef5ea135b919bf3dce97" },
   "nvim-cmp": { "branch": "main", "commit": "2ffe79f1f021def8dd1fcd81deb16f1bb0d989f3" },
-  "nvim-lsp-file-operations": { "branch": "master", "commit": "b1168a921c1648143ae5bb02dc0c1462240caeba" },
+  "nvim-lsp-file-operations": { "branch": "master", "commit": "514b86922e4c9f2d91c73e844d34d62809f997ef" },
   "nvim-lspconfig": { "branch": "master", "commit": "3e8d598d3b5f8338a41699c436e5fa11d2666cf0" },
   "nvim-nio": { "branch": "master", "commit": "edcc181a875301dd21840189aa2f2f9ad69fc172" },
   "nvim-treesitter": { "branch": "main", "commit": "910fdf6f49e9dee7e7257c7d11a76b040fdfb9de" },
