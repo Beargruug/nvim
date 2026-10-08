@@ -20,6 +20,10 @@ return {
 	{ "github/copilot.vim", event = "InsertEnter" },
 
 	{
+		dir = "~/personal/ai-klammer.nvim",
+        opts = { annoyance = 2 }
+	},
+	{
 		dir = "~/personal/skipper.nvim",
 	},
 	{
