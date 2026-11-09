@@ -6,6 +6,7 @@ return {
 			window = {
 				winblend = 0,
 				relative = "editor",
+				align = "top",
 			},
 		},
 	},

@@ -21,12 +21,8 @@ return {
 				keywordStyle = { italic = false },
 				statementStyle = { bold = true, italic = false },
 				typeStyle = {},
-				variablebuiltinStyle = { italic = false },
-				specialReturn = true,
-				specialException = true,
 				transparent = false,
 				dimInactive = false,
-				globalStatus = false,
 				terminalColors = true,
 			})
 

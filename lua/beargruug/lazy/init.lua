@@ -21,7 +21,7 @@ return {
 
 	{
 		dir = "~/personal/ai-klammer.nvim",
-		opts = { annoyance = 0 },
+		opts = { annoyance = 2 },
 	},
 	{
 		dir = "~/personal/skipper.nvim",
