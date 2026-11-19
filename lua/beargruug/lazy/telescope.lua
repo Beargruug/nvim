@@ -40,7 +40,7 @@ return {
 			vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>of", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
-			vim.keymap.set("n", "<leader>or", require("custom.multi-ripgrep"))
+			vim.keymap.set("n", "<leader>or", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>cb", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>gwb", ":Telescope git_branches<CR>")
 			vim.keymap.set("n", "<leader>sn", function()
