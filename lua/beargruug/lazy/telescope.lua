@@ -15,6 +15,8 @@ return {
 			"<leader>gwt",
 			"<leader>gct",
 			"<leader>gdt",
+			"<leader>pws",
+			"<leader>pWs",
 		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -43,6 +45,14 @@ return {
 			vim.keymap.set("n", "<leader>or", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>cb", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>gwb", ":Telescope git_branches<CR>")
+			vim.keymap.set("n", "<leader>pWs", function()
+				local word = vim.fn.expand("<cWORD>")
+				builtin.grep_string({ search = word })
+			end)
+			vim.keymap.set("n", "<leader>pws", function()
+				local word = vim.fn.expand("<cword>")
+				builtin.grep_string({ search = word })
+			end)
 			vim.keymap.set("n", "<leader>sn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end)
